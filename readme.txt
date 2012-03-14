@@ -173,5 +173,6 @@ No Upgrades At This Time
 
 == Screenshots ==
 
+- More Screenshots --> http://technerdia.com/projects/robotstxt/screenshots.html
+
 1. Collage of Multisite Robots.txt Manager Features.
-2. http://technerdia.com/projects/robotstxt/screenshots.html
