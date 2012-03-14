@@ -17,7 +17,7 @@ A Multisite Network Robots.txt Manager. Quickly manage all Network Websites robo
 
 This Plugin Was Created For Multisite Networks > Network Activations Only!
 
-** Don't Forget To Rate the Multisite Robots.txt Manager Plugin, Thanks! ------------------>
+** Don't Forget To Rate the Multisite Robots.txt Manager Plugin, Thanks! ------------------->
 
 ### Features:
 
