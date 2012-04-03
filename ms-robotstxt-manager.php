@@ -4,7 +4,7 @@
  * Plugin URI: http://technerdia.com/projects/robotstxt/plugin.html
  * Description: A Multisite Network Robots.txt Manager. Quickly manage your Network Websites robots.txt files from a single administration area.
  * Tags: robotstxt, robots.txt, robots, robot, spiders, virtual, search, google, seo, plugin, network, wpmu, multisite, technerdia, tribalnerd
- * Version: 0.1
+ * Version: 0.1.1
  * License: GPL
  * Author: tribalNerd
  * Author URI: http://techNerdia.com/
@@ -298,7 +298,8 @@ class robotstxt_msAdmin {
 
 
 		/* The Template with ob_start */
-		if ( substr_count( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' ) ) { ob_start("ob_gzhandler"); }else{ ob_start(); }
+		//if ( substr_count( $_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip' ) ) { ob_start("ob_gzhandler"); }else{ ob_start(); } /* removed 0.1.1 */
+		ob_start();
 			require_once( dirname( __FILE__ ) . '/template.inc.php' );
 		ob_end_flush();
 	} /* end function robotstxt_ms_admin() */
@@ -329,7 +330,7 @@ class robotstxt_msAdmin {
 		$tab_menu .= '<h2 class="nav-tab-wrapper">';
 			foreach( $tabs as $tab => $name ){
 				$class = ( $tab == $current ) ? ' nav-tab-active' : '';
-				$tab_menu .= "<a class='nav-tab$class' href='?tab=$tab&page=ms_robotstxt.php'>$name</a>";
+				$tab_menu .= "<a class='nav-tab$class' href='?tab=$tab&amp;page=ms_robotstxt.php'>$name</a>";
 			}
 		$tab_menu .= '</h2><br />';
 

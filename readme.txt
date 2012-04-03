@@ -5,7 +5,7 @@ Donate link: http://technerdia.com/projects/contribute.html
 Tags: robotstxt, robots.txt, robots, robot, spiders, virtual, search, google, seo, plugin, network, multisite, technerdia, tribalnerd
 Requires at least: 3.3
 Tested up to: 3.3.1
-Stable tag: 0.1
+Stable tag: 0.1.1
 
 
 A Multisite Network Robots.txt Manager. Quickly manage your Network Websites robots.txt files from a single administration area.
@@ -16,8 +16,6 @@ A Multisite Network Robots.txt Manager. Quickly manage your Network Websites rob
 A Multisite Network Robots.txt Manager. Quickly manage all Network Websites robots.txt files directly within the Network Admin.
 
 This Plugin Was Created For Multisite Networks > Network Activations Only!
-
-** Don't Forget To Rate the Multisite Robots.txt Manager Plugin, Thanks! ------------------->
 
 ### Features:
 
@@ -37,11 +35,7 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 
 * To make the robots.txt live for a Website, either click the "publish to network" button or select the Website from the dropdown > then click the "change sites" buttons. Next, adjust the displayed robots.txt file, then click the "update this website" button. Both methods publish the robots.txt file to the Website(s), making it live. Click the [ view robots.txt ] link next to the Websites dropdown to view the changes within your browser.
 
-
 ### Download > Install > Network Activate > Settings > MS Robots.txt
-
-
-** Let Others Know This Plugin Works!!!!! ------------------>
 
 
 [Submit Feedback For Improvements](http://technerdia.com/feedback.html) | 
@@ -73,8 +67,6 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 	* Standalone Wordpress: Site Dashboard > Plugins Menu
 * Locate the "Multisite Robots.txt Manager" Plugin in your listing of plugins. (sort by Inactive)
 * Click the Activate link to start the plugin.
-
-** Don't Forget To Rate The Multisite Robots.txt Manager Plugin ------------------>
 
 
 
@@ -113,7 +105,6 @@ A) Yes... but you must disable the robots.txt file for that Website you want to 
 [Frequently Asked Questions](http://technerdia.com/projects/robotstxt/faq.html)
 
 
-** Don't Forget To Rate The Multisite Robots.txt Manager Plugin ------------------>
 
 
 
@@ -154,12 +145,14 @@ A) Yes... but you must disable the robots.txt file for that Website you want to 
 * In a future release I will add an auto sitemap detector..... for now, it is best to use one of the more popular sitemap plugins, which adds the sitemap URL to the robots.txt file for you.
 
 
-** Don't Forget To Rate The Multisite Robots.txt Manager Plugin ------------------>
 
 
 
 == Changelog ==
 Alpha Release
+
+= 0.1.1 =
+* Removed ob_gzhandler
 
 = 0.1 =
 * Created March 08, 2012

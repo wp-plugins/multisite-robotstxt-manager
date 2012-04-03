@@ -6,7 +6,7 @@
  * @copyright Copyright (c) 2012, Chris Winters
  * @link http://technerdia.com/projects/robotstxt/plugin.html
  * @license http://www.gnu.org/licenses/gpl.html
- * @version 0.1
+ * @version 0.1.1
  */
 
 /**
@@ -27,7 +27,7 @@
 				<p><?php _e('You can use the examples below to create your own unique robots.txt file.... or select Network or a Website from the dropdown, then locate the robots.txt file you like, then click "set as default" to publish that robots.txt file to the selected Website or the Networks default robots.txt file.', 'ms_robotstxt_manager');?></p>
 	
 				<h2><?php _e('Publish To', 'ms_robotstxt_manager');?>?</h2>
-				<form action="" method="post">
+				<form action="<?php echo esc_attr( $_SERVER['REQUEST_URI'] );?>" method="post">
 				<?php wp_nonce_field( 'robotstxt_publish_action', 'robotstxt_publish_nonce' );?>
 					<select name="selected_site"><option value="robotstxt_network_set">Network Robots.txt File</option><?php $this->robotstxt_select();?></select>
 
@@ -106,7 +106,7 @@
 				<hr />
 
 				<h2><?php _e('Unique Robot.txt Files');?>:</h2>
-				<form action="" method="post">
+				<form action="<?php echo esc_attr( $_SERVER['REQUEST_URI'] );?>" method="post">
 				<?php wp_nonce_field( 'robotstxt_site_action', 'robotstxt_site_nonce' );?>
 					<select name="show_site"><option value="robotstxt_redirect"><?php _e('Network Wide');?></option><?php $this->robotstxt_select();?></select>
 					<input type="submit" name="submit" value=" change sites " /><?php if ( $_POST['show_site'] ) {?> [ <a href="<?php echo get_site_url( $_POST['show_site'], '/robots.txt' );?>" target="_blank"><?php _e('view');?> robots.txt</a> ]<?php }?><?php if ( $_GET['open'] ) {?> [ <a href="<?php echo get_site_url( $_GET['open'], '/wp-admin/index.php' );?>"><?php _e('Return to Site');?></a> ]<?php }?>
@@ -114,7 +114,7 @@
 
 				<br />
 				<h2><?php _e('Robot.txt File Display', 'ms_robotstxt_manager');?>:</h2>
-				<form action="" method="post">
+				<form action="<?php echo esc_attr( $_SERVER['REQUEST_URI'] );?>" method="post">
 				<?php wp_nonce_field( 'robotstxt_display_action', 'robotstxt_display_nonce' ); ?>
 					<?php if ( $_POST['show_site'] ) {?><input type="hidden" name="show_site" value="<?php echo $_POST['show_site'];?>" /><?php }?>
 
@@ -158,7 +158,7 @@
 					<li>&bull; <a href="http://wordpress.org/extend/plugins/multisite-robotstxt-manager/" target="_blank"><?php _e('Plugin at Wordpress.org', 'ms_robotstxt_manager');?></a> : MS Robots.txt</li>
 					<li>&bull; <a href="http://wordpress.org/tags/ms-robotstxt-manager" target="_blank"><?php _e('Support Forum', 'ms_robotstxt_manager');?></a> : <?php _e('Problems, Questions', 'ms_robotstxt_manager');?>?</li>
 					<li>&bull; <a href="http://technerdia.com/feedback.html" target="_blank"><?php _e('Submit Feedback', 'ms_robotstxt_manager');?></a> : <?php _e('I\'m Listening', 'ms_robotstxt_manager');?>!</li>
-					<li>&bull; <a href="http://technerdia.com/projects.html" target="_blank"><?php _e('techNerdia Projects', 'ms_robotstxt_manager');?></a> : <?php _e('More Goodies!', 'ms_robotstxt_manager');?>!</a></li>
+					<li>&bull; <a href="http://technerdia.com/projects.html" target="_blank"><?php _e('techNerdia Projects', 'ms_robotstxt_manager');?></a> : <?php _e('More Goodies!', 'ms_robotstxt_manager');?>!</li>
 				</ul>
 			</div> <!-- end inside -->
 		</div> <!-- end postbox -->
@@ -173,7 +173,7 @@
 					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
 						<input type="hidden" name="cmd" value="_s-xclick">
 						<input type="hidden" name="hosted_button_id" value="ZC85KWHZDA9DQ">
-						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Donate">
+						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="Donate" style="border:0;">
 					</form>
 					<p><small><?php _e('Donate To The MS Robots.txt Project Directly', 'ms_robotstxt_manager');?>!</small></p>
 					<p><strong><a href="http://www.amazon.com/registry/wishlist/3BXFUHL7NWQU1/" target="_blank"><?php _e('Amazon Wish List', 'ms_robotstxt_manager');?></a></strong></p></li>
@@ -224,7 +224,7 @@
 					<li>&bull; <a href="http://codex.wordpress.org/Search_Engine_Optimization_for_WordPress#Robots.txt_Optimization" target="_blank"><?php _e('Robots.txt Optimization Tips', 'ms_robotstxt_manager');?></a></li>
 					<li>&bull; <a href="http://www.askapache.com/seo/updated-robotstxt-for-wordpress.html" target="_blank"><?php _e('AskAapche Robots.txt Example', 'ms_robotstxt_manager');?></a></li>
 					<li>&bull; <a href="https://developers.google.com/webmasters/control-crawl-index/docs/faq" target="_blank"><?php _e('Google Robots.txt F.A.Q.', 'ms_robotstxt_manager');?></a></li>
-					<li>&bull; <a href="settings.php?tab=robotstxt_help&page=ms_robotstxt.php"><?php _e('How To Use This Plugin', 'ms_robotstxt_manager');?></a></li>
+					<li>&bull; <a href="settings.php?tab=robotstxt_help&amp;page=ms_robotstxt.php"><?php _e('How To Use This Plugin', 'ms_robotstxt_manager');?></a></li>
 				</ul>
 			</div> <!-- end inside -->
 		</div> <!-- end postbox -->
@@ -234,5 +234,5 @@
 		</div> <!-- end metabox-holder has-right-sidebar -->
 
 		<br style="clear:both;" /><br /><hr />
-		<p align="right"><small><b><?php _e('Created by', 'ms_robotstxt_manager');?></b>: <a href="http://technerdia.com/" target="_blank">techNerdia</a></small></p>
+		<p style="text-align:right;"><small><b><?php _e('Created by', 'ms_robotstxt_manager');?></b>: <a href="http://technerdia.com/" target="_blank">techNerdia</a></small></p>
 </div> <!-- end wrap -->
