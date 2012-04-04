@@ -105,8 +105,9 @@ if ( is_network_admin() || is_admin() ) {
  */
 class robotstxt_ms {
 	function __construct() {
-			remove_action( 'do_robots', 'do_robots' ); /* remove default */
-			add_action( 'do_robots', array( &$this, 'do_robots_display' ) ); /* add ours */
+			//remove_action( 'do_robots', 'do_robots' ); /* remove default */
+			//add_action( 'do_robots', array( &$this, 'do_robots_display' ) ); /* add ours */
+			add_filter( 'robots_txt', array( &$this, 'do_robots_display' ), 10, 2 ); /* Added 0.1.1 */
 	}
 	
 	/* display it */
