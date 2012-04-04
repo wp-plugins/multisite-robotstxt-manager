@@ -153,7 +153,7 @@ Alpha Release
 
 = 0.1.1 =
 * Removed ob_gzhandler
-* Replaced action do_robots with filter robots_txt
+* Replaced action do_robots with filter robots_txt.
 
 = 0.1 =
 * Created March 08, 2012
