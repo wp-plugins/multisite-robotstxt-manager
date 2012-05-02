@@ -99,8 +99,8 @@
 					<?php if ( !get_option( "ms_robotstxt" ) ) { echo '<p>'. __('Click "publish to network" to quickly populate and set active all websites robots.txt files.') .'</p>'; }?>
 				<?php }
 				if ( $_POST['show_site'] ) {?>
-					<?php if ( !get_option( "ms_robotstxt" ) ) { echo '<p>'. __('The MS Robots.txt Manager is DISABLED on this Website.') .'</p>'; }?>
-					<?php if ( get_option( "ms_robotstxt" ) ) { echo '<p>'. __('The MS Robots.txt Manager is ACTIVE on this Website.') .'</p>'; }?>
+					<?php if ( !get_option( "ms_robotstxt" ) ) { echo '<p>'. __('The MS Robots.txt Manager is DISABLED on this Website.') .'</p>';}?>
+					<?php if ( get_option( "ms_robotstxt" ) ) { echo '<p>'. __('The MS Robots.txt Manager is ACTIVE on this Website.') .'</p>';}?>
 				<?php }?>
 	
 				<hr />

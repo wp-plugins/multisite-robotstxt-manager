@@ -21,7 +21,7 @@ function uninstall_ms_robotstxt() {
 
 	$robotstxt_remove_list = $wpdb->get_results( $wpdb->prepare( 'SELECT blog_id FROM '. $wpdb->blogs .'  ORDER BY blog_id' ) );
 
-		foreach ( $robotstxt_remove_list as $siteids ) {
+		foreach ( $robotstxt_remove_list AS $siteids ) {
 			switch_to_blog( $siteids->blog_id );
 				delete_option( "ms_robotstxt" );
 				remove_action( 'do_robots', 'do_robots_display' );

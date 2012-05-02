@@ -149,7 +149,27 @@ A) Yes... but you must disable the robots.txt file for that Website you want to 
 
 
 == Changelog ==
+<<<<<<< .mine
 Alpha Release
+= 0.2.0 =
+* Added sitemap option, url, and structure to default robots.txt, per site, and pre-sets.
+* Adjusted all post types and preset values, and option arrays to use sitemap structure.
+* Adjusted default robots.txt option to store data within an array.
+* Adjusted default option for websites robots.txt to store data within an array.
+* Adjusted robots.txt display to include sitemap urls.
+* Created a new sitemap option to store sitemap data at the Website level.
+* Made the site dropdown list populate in a new way, and list site names insted of domains.
+* Serialize proper option data.
+* Removed transient cache and related db calls.
+* Added non-network check on install.
+* Adusted, cleaned html and corrected typos within admin area template.
+* Adjusted uninstall.php to use new option names.
+* Created instructions for the Sitemap URL Structure feature.
+* New screenshot gif and readme.txt updated.
+* Updated Wordpress Function References.
+=======
+Alpha Release
+>>>>>>> .r539155
 
 = 0.1.1 =
 * Removed ob_gzhandler
