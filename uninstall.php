@@ -6,7 +6,7 @@
  * @copyright Copyright (c) 2012, Chris Winters
  * @link http://technerdia.com/projects/robotstxt/plugin.html
  * @license http://www.gnu.org/licenses/gpl.html
- * @version 0.1
+ * @version 0.2.0
  */
 
 /**
@@ -23,13 +23,17 @@ function uninstall_ms_robotstxt() {
 
 		foreach ( $robotstxt_remove_list as $siteids ) {
 			switch_to_blog( $siteids->blog_id );
+				remove_filter( 'robots_txt', array( 'robotstxt_ms', 'do_robots_display' ) );
+				delete_option( "ms_robotstxt_sitemap" );
+				delete_option( "ms_robotstxt_default" );
 				delete_option( "ms_robotstxt" );
-				remove_action( 'do_robots', 'do_robots_display' );
 		}
 
 		switch_to_blog(1);
+			remove_filter( 'robots_txt', array( 'robotstxt_ms', 'do_robots_display' ) );
+			delete_option( "ms_robotstxt_sitemap" );
 			delete_option( "ms_robotstxt_default" );
-			delete_site_transient( 'robotstxt_siteids' );
+			delete_option( "ms_robotstxt" );
 		restore_current_blog();
 
 	return;
