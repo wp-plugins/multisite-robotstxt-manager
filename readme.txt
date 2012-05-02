@@ -4,8 +4,8 @@ Contributors: tribalNerd, Chris Winters
 Donate link: http://technerdia.com/projects/contribute.html
 Tags: robotstxt, robots.txt, robots, robot, spiders, virtual, search, google, seo, plugin, network, multisite, technerdia, tribalnerd
 Requires at least: 3.3
-Tested up to: 3.3.1
-Stable tag: 0.1.1
+Tested up to: 3.3.2
+Stable tag: 0.2.0
 
 
 A Multisite Network Robots.txt Manager. Quickly manage your Network Websites robots.txt files from a single administration area.
@@ -20,15 +20,16 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 ### Features:
 
 * Manage all Network Websites from one Administration area.
+* Instantly add Sitemaps URLs to all Network Websites.
 * Mass update the entire Network or update a unique Website.
 * Each Website within a Network can have a unique robots.txt file.
 * Robots.txt file examples that can be published to Websites or stored as a default.
 
 ### Quick Info:
 
-* When you first install the plugin, no robots.txt files are active.
+* When you first install the plugin, only the default Wordpress robots.txt file is active.
 * The default "Network Wide" robots.txt file is NOT a live robots.txt file.
-* If you deactivate the plugin, no options are removed but the robots.txt file(s) are no longer displayed.
+* If you deactivate the plugin, no options are removed but the plugins robots.txt file(s) are no longer displayed.
 * If you delete this plugin, all options and settings will be removed from the database.
 
 ### Make It Work:
@@ -53,7 +54,6 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 
 * It is recommended that you use the built in Wordpress installer to install plugins.
 	* Multisite Networks: Network Admin > Plugins Menu > Add New Button
-	* Standalone Wordpress: Site Dashboard > Plugins Menu > Add New Button
 * In the Search box, enter: MS Robots.txt
 * Click Install Now and proceed through the plugin setup process.
 	* Activate / Network Activate the plugin when asked.
@@ -64,7 +64,6 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 * If uploading, upload the /ms_robotstxt_manager/ folder to /wp-content/plugins/ folder for your Worpdress install.
 * Then open the Wordpress Admin:
 	* Multisite Networks: Network Admin > Plugins Menu
-	* Standalone Wordpress: Site Dashboard > Plugins Menu
 * Locate the "Multisite Robots.txt Manager" Plugin in your listing of plugins. (sort by Inactive)
 * Click the Activate link to start the plugin.
 
@@ -94,7 +93,7 @@ A) Yes
 
 = Q) Does this plugin add Sitemap links to the robots.txt file? =
 
-A) In the future, yes... however, not currently. Several Sitemap plugins will automatically add it for you, and all sites should be using a sitemap plugin!
+A) As an optional feature, yes.
 
 
 = Q) Can I use other robots.txt file plugins with yours? =
@@ -116,7 +115,31 @@ A) Yes... but you must disable the robots.txt file for that Website you want to 
 
 ### Understanding the Default Settings
 
-* When you first enter the MS Robots.txt Settings page, the shown robots.txt file is the default "network only" or "network wide" working copy. Modify the default robots.txt file, save the default file, and when ready click the "publish to network" button to duplicate the robots.txt file to all Websites within the Network.
+* When you first enter the MS Robots.txt Settings page, the shown robots.txt file is the default "network only" or "network wide" working copy. Modify the default robots.txt file, save the default file, and when ready click the "publish to network" button to duplicate the robots.txt file to all Network Websites.
+
+### Sitemap URLs and Structure
+
+* Most Wordpress Sitemap Plugins can automatically add the Sitemap URL's to the robots.txt file for you. Be sure to disable this feature within other Plugins if you use the feature within this plugin, otherwise more than one sitemap url will be listed in the robots.txt file.
+
+* To add a Sitemap URL to a Robots.txt file, simply select the checkbox to add the sitemap url, then enter the Sitemap URL Structure to use.
+
+* Almost all Wordpress Installs will use: http://[WEBSITE_URL]/sitemap.xml
+
+* The [brackets] within the Sitemap URL's automatically get replaced by the plugin (You Will Use Them). Network Wide Sitemap Updates "must" use the [bracket] structure to ensure Websites have the proper Sitemap URL. Unique Website updates can use the brackets OR take the full sitemap url directly.
+
+### Sitemap URLs and Structure
+
+* Wordpress Sitemap URLs: http://[WEBSITE_URL]/sitemap.xml
+* GoDaddy Sitemap URLs: http://[WEBSITE_URL]/sitemaps/[DOMAIN]-[EXT].xml
+* Random Example: http://[WEBSITE_URL]/[DOMAIN]-[EXT]-sitemap.xml.gz
+
+* Structure Meaning:
+* [WEBSITE_URL] = domain.com
+* [DOMAIN] = domain
+* [EXT] = .com/net, etc.
+
+* Always include the http:// with the Sitemap URL Structure.
+* If the sitemaps are within a directory, /include-the-path/ within the sitemap url.
 
 ### New Website Added to Network
 
@@ -140,16 +163,17 @@ A) Yes... but you must disable the robots.txt file for that Website you want to 
 
 * Use the provided examples to create your own robots.txt file.... or within the dropdown, select either the Networks Robots.txt file or a Websites Robots.txt file, then click the "set as default" button to copy the example over, to the selected file.
 
+* Presets can also use the Sitemap URL Structure setting. Read above on how to use this feature.
+
 ### Sitemaps and Sitemap Plugins
 
-* In a future release I will add an auto sitemap detector..... for now, it is best to use one of the more popular sitemap plugins, which adds the sitemap URL to the robots.txt file for you.
+* The Multisite Robots.txt Manager plugin has been tested with: Google XML Sitemaps with Multisite support and BWP Google XML Sitemaps.
 
 
 
 
 
 == Changelog ==
-<<<<<<< .mine
 Alpha Release
 = 0.2.0 =
 * Added sitemap option, url, and structure to default robots.txt, per site, and pre-sets.
@@ -165,11 +189,8 @@ Alpha Release
 * Adusted, cleaned html and corrected typos within admin area template.
 * Adjusted uninstall.php to use new option names.
 * Created instructions for the Sitemap URL Structure feature.
-* New screenshot gif and readme.txt updated.
+* New screenshot file and readme.txt updated.
 * Updated Wordpress Function References.
-=======
-Alpha Release
->>>>>>> .r539155
 
 = 0.1.1 =
 * Removed ob_gzhandler
