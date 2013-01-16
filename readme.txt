@@ -1,30 +1,27 @@
 === Multisite Robots.txt Manager ===
 Plugin Name: Multisite Robots.txt Manager | MS Robots.txt
 Contributors: tribalNerd, Chris Winters
-Donate link: http://technerdia.com/projects/contribute.html
+Donate link: http://msrtm.technerdia.com/donate.html
 Tags: robotstxt, robots.txt, robots, robot, spiders, virtual, search, google, seo, plugin, network, mu, multisite, technerdia, tribalnerd
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: 0.3
+Stable tag: 0.3.1
 
 
-A Multisite Robots.txt Manager - Quickly manage your Network Websites robots.txt files from a single administration area.
-
-
-
-
+A Multisite Robots.txt Manager - Quickly and easily manage all robots.txt files on a Wordpress Multisite Website Network.
 
 
 == Description ==
 
-A Multisite Robots.txt Manager - Quickly manage your Network Websites robots.txt files from a single administration area.
+A Multisite Robots.txt Manager - Quickly and easily manage all robots.txt files on a Wordpress Multisite Website Network.
 
 This Plugin Was Created For Multisite Networks > Network Activations Only!
 
 
 ### Features:
 
-* Manage all Network Websites from one Administration area.
+* Manage all Websites from Network Administration Area.
+* Manage a single Website through the Website Settings Admins.
 * Instantly add Sitemaps URL's to all robots.txt files.
 * Mass update the all Websites on the Network in a single click.
 * Create custom and unique robots.txt files for each Website.
@@ -34,7 +31,7 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 
 * The default "Network Wide" robots.txt file is NOT a live robots.txt file.
 * If you deactivate the plugin, no options are removed but the plugins robots.txt file(s) are no longer displayed.
-* If you delete this plugin, all options and settings will be removed from the database.
+* If you delete this plugin, all options and settings will be removed from the database, for all Websites.
 
 ### Make It Work:
 
@@ -43,9 +40,9 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 ### Download > Install > Network Activate > Settings > MS Robots.txt
 
 
-[Submit Feedback For Improvements](http://technerdia.com/feedback.html) | 
-[Screenshots](http://technerdia.com/projects/robotstxt/screenshots.html) | 
-[Plugin Home](http://technerdia.com/projects/robotstxt/plugin.html)
+[Submit Feedback For Improvements](http://msrtm.technerdia.com/feedback.html) | 
+[Screenshots](http://msrtm.technerdia.com/help/docs/screenshots.html) | 
+[Plugin Home](http://msrtm.technerdia.com/)
 
 
 
@@ -53,9 +50,9 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 
 
 == Installation ==
-[View the Install Guide](http://technerdia.com/projects/robotstxt/plugin.html) | 
-[Screenshots](http://technerdia.com/projects/robotstxt/screenshots.html) | 
-[Feedback](http://technerdia.com/feedback.html)
+[View the Install Guide](http://msrtm.technerdia.com/) | 
+[Screenshots](http://msrtm.technerdia.com/help/docs/screenshots.html) | 
+[Feedback](http://msrtm.technerdia.com/feedback.html)
 
 ### Install through the Wordpress Admin
 
@@ -82,26 +79,16 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 
 
 == Frequently Asked Questions ==
-[F.A.Q.](http://technerdia.com/projects/robotstxt/faq.html) | 
-[Screenshots](http://technerdia.com/projects/robotstxt/screenshots.html) | 
-[Feedback](http://technerdia.com/feedback.html)
+[F.A.Q.](http://msrtm.technerdia.com/#faq) | 
+[Screenshots](http://msrtm.technerdia.com/help/docs/screenshots.html) | 
+[Feedback](http://msrtm.technerdia.com/feedback.html)
 
 ### Frequently Asked Questions:
 
 
 = Q) Not all Websites are showing in the dropdown on the admin page, what's wrong? =
 
-A) Your 'Super User - Username' is not a member of the other blogs. Access the Network Admin > Sites Admin > Edit a Site > User Tab and set your Super Admin User Name as an Administrator for each Website OR log into the Super User account for the Website(s) in question.
-
-
-= Q) Who can Manage the settings for the plugin?=
-
-A) Only Super Users. An incorrectly created or changed robots.txt file can delist a Website from Search Engines. For this reason the plugin can only be managed by Super Users.
-
-
-= Q) Does the plugin create robots.txt files within a directory? =
-
-A) Yes, however Search Engines Spiders will not find or read a robots.txt file within a directory.
+A) Your User is not a member of the other blogs. Login as the other users, or access the Network Admin > Sites Admin > Edit a Site > User Tab and set your User Name as an Administrator for each Website.
 
 
 = Q) Can the plugin update all Websites at once? =
@@ -131,7 +118,7 @@ A) No, only within the Network Admin.
 
 = Q) Do I have to access each Website to manage the robots.txt file? =
 
-A) No, the Admin Area for the MS Robots.txt Manager is located within the Network Admin. All Websites robots.txt files are managed from here.
+A) No, the Main Admin Area for the MS Robots.txt Manager is located within the Network Admin.
 
 
 = Q) Can I add my own robots.txt file? =
@@ -166,7 +153,7 @@ A) Yes, however.... Search Engine Spiders do not read robots.txt files within a 
 
 = Q) I run a real Multisite Network, all Sites are in a Path, don't they need a robots.txt file? =
 
-A) No, only the root / network Website should have a robots.txt file.
+A) From what I understand, no.... The root / network Website will contain the only robots.txt file.
 
 
 = Q) The Sitemap URL isn't working when viewing a robots.txt file from a directory, what's wrong? =
@@ -195,7 +182,7 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 
 
 
-[Frequently Asked Questions](http://technerdia.com/projects/robotstxt/faq.html)
+[Frequently Asked Questions](http://msrtm.technerdia.com/#faq)
 
 
 
@@ -205,9 +192,9 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 
 == Arbitrary section ==
 
-[View the Install Guide](http://technerdia.com/projects/robotstxt/projects.html) | 
-[Screenshots](http://technerdia.com/projects/robotstxt/screenshots.html) | 
-[Feedback](http://technerdia.com/feedback.html)
+[View the Install Guide](http://msrtm.technerdia.com/help/docs/getting-started.html) | 
+[Screenshots](http://msrtm.technerdia.com/help/docs/screenshots.html) | 
+[Feedback](http://msrtm.technerdia.com/feedback.html)
 
 ### Understanding the Default Settings
 
@@ -247,7 +234,7 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 ### Robots.txt Files within Directories and Non-Mapped Domains
 
 * Search Engine Spiders only read robots.txt files found within the root directory of a Website. Spiders do not read robots.txt files within directories, such as: domain.com/PATH-or-FOLDER/robots.txt is NOT a valid location. Because of this, the sitemap urls are not rendered on robots.txt files that are being displayed within a directory.
-* From Google: "The robots.txt file must be in the top-level directory of the host.....Crawlers will not check for robots.txt files in sub-directories."
+* From Google: "The robots.txt file must be in the top-level directory of the host.....Crawlers will not check for robots.txt files in sub-directories." [ source ]
 
 * ~ For Testing Purposes: Non-mapped Network Websites will have a robots.txt file rendered for the Website. This is NOT the robots.txt file to submit to Google. Only submit robots.txt files found on a domains root, such as: domain.com/robots.txt
 
@@ -312,12 +299,21 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 
 == Changelog ==
 Alpha Release
-= 0.3 =
+= 0.3.1 =
+* Created website admin areas.
+* Added is_user_member_of_blog function for super admins.
+
+= 0.3.0 =
 * Modified add_submenu_page calls.
 * Modified DB prepare() statements.
 * Structure change to make room for automation feature.
 * Cleaned undefined index errors.
 * Ran PHP Debug and WP Debug and removed related errors.
+
+= 0.2.2 =
+* Modified add_submenu_page calls.
+* Modified DB prepare() statements.
+* Structure change to make room for automation feature.
 
 = 0.2.1 =
 * Made robots.txt file display when a Website within a directory (domain.com/domain-path) is called.
@@ -374,6 +370,6 @@ No Upgrades At This Time
 
 == Screenshots ==
 
-- More Screenshots --> http://technerdia.com/projects/robotstxt/screenshots.html
+- More Screenshots --> http://msrtm.technerdia.com/help/docs/screenshots.html
 
 1. Collage of the Multisite Robots.txt Manager Features.

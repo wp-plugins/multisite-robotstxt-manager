@@ -3,10 +3,10 @@
  * Multisite Robots.txt Manager
  * @package Multisite Robots.txt Manager
  * @author tribalNerd (tribalnerd@technerdia.com)
- * @copyright Copyright (c) 2012, Chris Winters
- * @link http://technerdia.com/projects/robotstxt/plugin.html
+ * @copyright Copyright (c) 2012-2013, techNerdia LLC.
+ * @link http://msrtm.technerdia.com/
  * @license http://www.gnu.org/licenses/gpl.html
- * @version 0.3
+ * @version 0.3.1
  */
 
 /**
