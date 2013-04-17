@@ -4,8 +4,8 @@ Contributors: tribalNerd, Chris Winters
 Donate link: http://msrtm.technerdia.com/donate.html
 Tags: robotstxt, robots.txt, robots, robot, spiders, virtual, search, google, seo, plugin, network, mu, multisite, technerdia, tribalnerd
 Requires at least: 3.3
-Tested up to: 3.5
-Stable tag: 0.3.1
+Tested up to: 3.5.1
+Stable tag: 0.4.0
 
 
 A Multisite Robots.txt Manager - Quickly and easily manage all robots.txt files on a Wordpress Multisite Website Network.
@@ -15,6 +15,7 @@ A Multisite Robots.txt Manager - Quickly and easily manage all robots.txt files 
 
 A Multisite Robots.txt Manager - Quickly and easily manage all robots.txt files on a Wordpress Multisite Website Network.
 
+!!! Network Enabled Multisite Installs Only !!!
 This Plugin Was Created For Multisite Networks > Network Activations Only!
 
 
@@ -26,6 +27,8 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 * Mass update the all Websites on the Network in a single click.
 * Create custom and unique robots.txt files for each Website.
 * Quickly publish preset robots.txt files to the Network or a Website.
+* Auto detection and one click correction for 404 robots.txt files.
+* Auto detection and one click correction of old robots.txt data.
 
 ### Quick Info:
 
@@ -33,19 +36,22 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 * If you deactivate the plugin, no options are removed but the plugins robots.txt file(s) are no longer displayed.
 * If you delete this plugin, all options and settings will be removed from the database, for all Websites.
 
+* Get The Plugin: Download > Install > Network Activate
+* Network Access: Network Admin > Settings Tab > MS Robots.txt Link
+* Website Access: Website Admin > Settings Tab > MS Robots.txt Link
+
 ### Make It Work:
 
-* To make the robots.txt live for a Website, either click the "publish to network" button or select the Website from the dropdown > then click the "change sites" buttons. Next, adjust the displayed robots.txt file, then click the "update this website" button. Both methods publish the robots.txt file to the Website(s), making it live. Click the [ view robots.txt ] link next to the Websites dropdown to view the changes within your browser.
+* Network Admin: Modify and save the default robots.txt file, then click the "publish to network" button to duplicate the default robots.txt file to all Websites on the Network.
+* Network Admin - Unique Website: From the dropdown menu select a website, then click the "change sites" button. Modify the robots.txt file then click the "update this website" button to publish your changes.
+* Website Admin: Modify the robots.txt file then click the "update this website" button to publish your changes.
 
-### Download > Install > Network Activate > Settings > MS Robots.txt
+** You must click either the "publish to network" or "update this website" button before any robots.txt files are set live.
 
 
 [Submit Feedback For Improvements](http://msrtm.technerdia.com/feedback.html) | 
 [Screenshots](http://msrtm.technerdia.com/help/docs/screenshots.html) | 
 [Plugin Home](http://msrtm.technerdia.com/)
-
-
-
 
 
 
@@ -74,10 +80,6 @@ This Plugin Was Created For Multisite Networks > Network Activations Only!
 
 
 
-
-
-
-
 == Frequently Asked Questions ==
 [F.A.Q.](http://msrtm.technerdia.com/#faq) | 
 [Screenshots](http://msrtm.technerdia.com/help/docs/screenshots.html) | 
@@ -98,12 +100,7 @@ A) Yes.
 
 = Q) Does this plugin work on Non-Multisite Installs? =
 
-A) No, your install MUST be Multisite enabled.
-
-
-= Q) Has the plugin been tested with WordPress MU Domain Mapping Plugin?
-
-A) Yes, it was built on it.
+A) No, your install MUST be Multisite/Network enabled.
 
 
 = Q) Does this plugin work on Wordpress.COM (free hosted) Websites? =
@@ -135,6 +132,10 @@ A) Yes.
 
 A) Yes.
 
+= Q) Can I add multiple sitemap urls?
+
+A) Not at this time, but in a future release that will be possible.
+
 
 = Q) Does the Sitemap url automatically get added to the robots.txt file? =
 
@@ -156,24 +157,24 @@ A) Yes, however.... Search Engine Spiders do not read robots.txt files within a 
 A) From what I understand, no.... The root / network Website will contain the only robots.txt file.
 
 
-= Q) The Sitemap URL isn't working when viewing a robots.txt file from a directory, what's wrong? =
+= Q) My robots.txt files are 404 - file not found, what's wrong? =
 
-A) Nothing.... this solves a rendering issue with sitemap urls. If the sitemap url is rendered it will include the /path/, which will cause issues with a domain is mapped to the path, thus the simplest solution is to exclude the sitemap url if within a directory.
+A) The issue is due to an option called "rewrite rules" - it's missing the robots.txt entry. Visit the Help Tab within the plugin admin, under the Check for Errors section click the "check for missing rewrite rules" button. This will scan all Websites for the missing entry or missing rewrite rules. If any are found a new button will appear allow you to correct the issue.
+
+
+= Q) The incorrect robots.txt file is displaying, what's wrong? =
+
+A) Typically this issue is due to either an a different robots.txt file plugin is active or that plugins robots.txt file data was never deleted when the plugin was removed. Visit the Help Tab within the plugin admin, under the Check for Errors section click the "check for old robots.txt plugin data" button. This will scan all Websites for old robots.txt plugin data. If any are found a new button will appear allow you to clean the old data out.
 
 
 = Q) Can I use other robots.txt file plugins with the MS Robots.txt Manager Plugin? =
 
-A) Yes... but you must disable the robots.txt file for the Website you want to use the other plugin on. To do this, access the MS Robots.txt Settings, select the Website, and click the "disable this website" button to turn the manager for that Website.
+A) No, multiple plugins will cause display issues with the robots.txt files.
 
 
 = Q) Can I use other Sitemap Plugins to add more Sitemap URL's to the robots.txt files? =
 
-A) Yes, they should work without issue.
-
-
-= Q) I've installed the plugin, and do not want to use it, but now Wordpress will not delete it, what's up? =
-
-A) Wordpress handles the removal of all plugins. This plugin does not create files or modify file permissions. When a plugin fails to delete, the issue has to do with file permissions; normally the username that added the plugin is not the username trying to remove the plugin. If this isn't the issue, Wordpress and/or Server/Host/Admin modified the file permissions or file ownerships of the plugin. Log into your Wordpress install via FTP; visually 'compare' the file permissions, user and group that owns the Plugin against other plugins. Typically, if this information does not match you'll have to ask your Host for assistance.
+A) Yes.
 
 
 = Q) Does the plugin remove the settings when it is disabled or deleted? =
@@ -185,11 +186,6 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 [Frequently Asked Questions](http://msrtm.technerdia.com/#faq)
 
 
-
-
-
-
-
 == Arbitrary section ==
 
 [View the Install Guide](http://msrtm.technerdia.com/help/docs/getting-started.html) | 
@@ -198,31 +194,38 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 
 ### Understanding the Default Settings
 
-* When you first enter the MS Robots.txt Settings page, the shown robots.txt file is the default "network only" or "network wide" working copy. Modify the default robots.txt file, save the default file, and when ready click the "publish to network" button to duplicate the robots.txt file to all Network Websites.
+* When you first enter the plugin admin via the Network Admin, the shown robots.txt file is the default "network only" or "network wide" working copy. Modify the default robots.txt file, save the default file, and when ready click the "publish to network" button to duplicate the robots.txt file to all Network Websites.
 
 
 ### Create / Manage
 
-* The Create / Manage tab contains an inactive, "network only" or "network wide" working copy of the robots.txt file. Modify the default robots.txt file, save the default file, and when ready click the "publish to network" button to duplicate the robots.txt file to all Network Websites.
+* The Defaults tab contains an inactive, "network only" or "network wide" working copy of the robots.txt file. Modify the default robots.txt file, save the default file, and when ready click the "publish to network" button to duplicate the robots.txt file to all Network Websites.
 
 
 ### Sitemap URLs and Structure
 
-* Most Wordpress Sitemap Plugins can automatically add the Sitemap URL's to the robots.txt file for you. Be sure to disable this feature within other Plugins if you use the feature within this plugin, otherwise more than one sitemap url will be listed in the robots.txt file.
+* The Sitemap URL Structure feature uses 3 different [shortcodes] to customize how sitemap urls are rendered on a robots.txt file. The shortcodes get a websites url and then break the url apart, separating the domain name from the domain extension.
 
-* To add a Sitemap URL to a Robots.txt file, simply select the check box to add the sitemap url, then enter the Sitemap URL Structure to use.
+* Example Structure: http://[WEBSITE_URL]/sitemap.xml
 
-* Almost all Wordpress Installs will use: http://[WEBSITE_URL]/sitemap.xml
+* The [bracket] within the url automatically gets replaced by the plugin (You Will Use The Brackets).
 
-* The [brackets] within the Sitemap URL's automatically get replaced by the plugin (You Will Use Them). Network Wide Sitemap Updates "must" use the [bracket] structure to ensure Websites have the proper Sitemap URL. Unique Website updates can use the brackets OR take the full sitemap url directly.
-
+* The default sitemap structure within the network admin, "must" use the [bracket] structure, otherwise when you publish to the network, the sitemap urls will not render correctly. You can directly modify a Websites sitemap structure or enter a full sitemap url, by selected the site from the drop down menu above, then click the "change sites" button.
 
 ### Sitemap URL Structure
 
-* Wordpress Sitemap URLs: http://[WEBSITE_URL]/sitemap.xml
-* GoDaddy Sitemap URLs: http://[WEBSITE_URL]/sitemaps/[DOMAIN]-[EXT].xml
-* Random Example: http://[WEBSITE_URL]/[DOMAIN]-[EXT]-sitemap.xml.gz
-* Structure Meaning:
+* Example sitemap structures you can use.
+
+* Wordpress Structure: http://[WEBSITE_URL]/sitemap.xml
+Sitemap URL: http://domain.com/sitemap.xml
+
+* GoDaddy Structure: http://[WEBSITE_URL]/sitemaps/[DOMAIN]-[EXT].xml
+Sitemap URL: http://domain.com/sitemaps/domain-com.xml
+
+* Random Structure: http://[WEBSITE_URL]/[DOMAIN]-[EXT]-sitemap.xml.gz
+Sitemap URL: http://domain.com/domain-com-sitemap.xml.gz
+
+### Structure Meaning
 * [WEBSITE_URL] = domain.com
 * [DOMAIN] = domain
 * [EXT] = .com/net, etc.
@@ -231,14 +234,13 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 * If the sitemaps are within a directory, /include-the-path/ within the sitemap url.
 
 
-### Robots.txt Files within Directories and Non-Mapped Domains
+### Robots.txt Files within Directories
 
-* Search Engine Spiders only read robots.txt files found within the root directory of a Website. Spiders do not read robots.txt files within directories, such as: domain.com/PATH-or-FOLDER/robots.txt is NOT a valid location. Because of this, the sitemap urls are not rendered on robots.txt files that are being displayed within a directory.
+* This plugin WILL render robots.txt files within directories - however,
+
+* Search Engine Spiders only read robots.txt files found within the root directory of a Website. Spiders do not read robots.txt files within directories, such as: domain.com/PATH-or-FOLDER/robots.txt is NOT a valid location.
+
 * From Google: "The robots.txt file must be in the top-level directory of the host.....Crawlers will not check for robots.txt files in sub-directories." [ source ]
-
-* ~ For Testing Purposes: Non-mapped Network Websites will have a robots.txt file rendered for the Website. This is NOT the robots.txt file to submit to Google. Only submit robots.txt files found on a domains root, such as: domain.com/robots.txt
-
-* Sitemap URLs: For "real" Multisite HOST Networks, use the Wordpress plugin: BWP Google XML Sitemaps - This plugin will list each Websites Sitemap URL's in the Root Network Website's robots.txt file.
 
 
 ### Testing Robots.txt Files
@@ -261,11 +263,6 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 * Per Site: Change to the Website in the dropdown. Then click the "reset this website" button to copy the default robots.txt file to this Website. If needed, modify the robots.txt file and click the "update this website" button once done.
 
 
-### Manage a Websites Robots.txt File
-
-* To manage a Website directly, select the Website from the dropdown, then click the "change sites" button. This will display the robots.txt file for the selected Website. Change the robots.txt file how you like, once done click the "update this website" button to publish the modification.
-
-
 ### Disabling
 
 * Disable a Website: To disable the MS Robots.txt Manager on a Website, select the Website from the dropdown menu, then click the "change sites" button. With the Website's robots.txt file open, click the "disable this website" button. This will clear the robots.txt file and sitemap structure settings for this Website only, making the Wordpress default robots.txt file display.
@@ -286,12 +283,13 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 * Presets can also use the Sitemap URL Structure setting. Read above on how to use this feature.
 
 
-### Sitemap Plugins
+### Recommended Sitemap Plugins
 
-* The Multisite Robots.txt Manager plugin has been tested with:
-* Google XML Sitemaps with Multisite support and BWP Google XML Sitemaps
+* Better WordPress Google XML Sitemaps: http://wordpress.org/extend/plugins/bwp-google-xml-sitemaps/
+* Google XML Sitemaps: http://wordpress.org/extend/plugins/google-sitemap-generator/
+* Search For Others: http://wordpress.org/extend/plugins/search.php?q=multisite+sitemap
 
-
+For "real" Multisite HOST Networks, use the Wordpress plugin: BWP Google XML Sitemaps - This plugin will list each Websites Sitemap URL's in the Root Network Website's robots.txt file.
 
 
 
@@ -299,6 +297,24 @@ A) When the plugin is disabled, no settings are deleted, however the robots.txt 
 
 == Changelog ==
 Alpha Release
+= 0.4.0 =
+* Major rebuild
+* Modified how and when the sitemap urls are created.
+* Created top-level domain array for sitemap url breakdown.
+* Removed network map checks due to alt setup methods.
+* Update preset robots.txt files and create 2 new styles.
+* Rebuilt all options to use array format.
+* Renamed classes and functions.
+* Added better sanitization and escaping throughout.
+* Adjusted how pro extension integrates in.
+* Modified admin html/css to work better for mobile.
+* Removed a few pounds of code.
+* Improved help text throughout.
+* Improved error checking.
+* Adjusted install/uninstall functions for non-network installs.
+* Merged network admin and website admin template.
+* Add old robots.txt plugin detection and cleaning option.
+
 = 0.3.1 =
 * Created website admin areas.
 * Added is_user_member_of_blog function for super admins.
